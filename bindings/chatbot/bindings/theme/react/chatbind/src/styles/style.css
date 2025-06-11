@@ -1,0 +1,146 @@
+/* General styles for the product grid */
+.product {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 300px; /* Adjust width as necessary */
+    padding: 20px;
+    margin: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    background-color: #fff;
+    transition: transform 0.3s ease-in-out;
+}
+.productCard{
+  background-color: #fff;
+  border-radius: 15px;
+  width: 23%;
+  height: 470px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  box-shadow: 4px 4px 20px 0.8px  rgba(0, 0, 0, 0.2);
+}
+.productName{
+  font-size: larger;
+  font-weight: 500;
+  line-height: 1.3;
+}
+.productImage {
+  margin-top: 4%;
+    width: 90%; /* Makes images responsive */
+    height: 78%;
+    border-radius: 15px;
+    margin-bottom: 10px;
+    object-fit: fill;
+    object-position: center;
+}
+
+.product h1 {
+    font-size: 18px;
+    color: #333;
+    margin: 10px 0;
+}
+
+.product h2 {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 10px;
+}
+
+/* Hover effect for product card */
+.product:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Container for horizontal product layout */
+.container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+    width: 100%;
+}
+.title1, .title2{
+  font-size: 24px;
+  font-weight: 700;
+  text-align: center;
+  margin: 20px 10px 20px;
+}
+/* Chatbot Container */
+.chatbotContainer {
+  border-radius: 15px;
+  padding: 20px;
+  margin: 20px auto;
+  background-color: #fff;
+  border: 1px solid;
+  border-color: #444;
+  width: 90%;
+  max-width: 800px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.messageArea {
+  min-height: 100px;
+  max-height: 200px;
+  overflow-y: auto;
+  margin-bottom: 10px;
+  padding: 10px;
+  border-radius: 10px;
+  background-color: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.botMessage, .userMessage {
+  padding: 10px;
+  margin: 5px 0;
+  border-radius: 10px;
+}
+
+.botMessage {
+  background-color: #fff;
+  color: black;
+  border: 1px solid;
+  border-color: #444;
+  text-align: left;
+}
+
+.userMessage {
+  background-color: #fff;
+  border: 1px solid;
+  border-color: #444;
+  color: black;
+  text-align: right;
+}
+
+.chatForm {
+  display: flex;
+  gap: 10px;
+  background-color: #fff;
+}
+
+.chatInput {
+  flex-grow: 1;
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.sendButton {
+  padding: 10px 20px;
+  background-color: #fff;
+  color: black;
+  border: none;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.sendButton:hover {
+  background-color: black;
+  color:#fff;
+}

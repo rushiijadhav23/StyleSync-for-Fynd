@@ -92,54 +92,50 @@ export function Component({ title = "Extension Title Default" }) {
   }, [productItems.length]);
 
   const chatting = async (query) => {
-    const API_URL = "https://asia-south1.workflow.boltic.app/89b7e111-c0bc-4e2e-b4bd-40e973146f94/chat";
 
-    const requestData = {
-      company_id: 10368,
-      query: query,
-    };
+  const API_URL = "https://asia-south1.workflow.boltic.app/89b7e111-c0bc-4e2e-b4bd-40e973146f94/chat";
 
-    const headers = {
-      "Content-Type": "application/json",
-    };
-
-    try {
-      const response = await fetch(API_URL, {
-        method: "POST",
-        headers: headers,
-        body: JSON.stringify(requestData),
-      });
-
-      if (!response.ok) {
-        throw new Error(`HTTP error! status: ${response.status}`);
-      }
-
-      const data = await response.json();
-      console.log("Response:", data);
-
-      if (Array.isArray(data.recommended_products)) {
-        setRecommendedSlugs(data.recommended_products);
-      } else {
-        console.warn("Unexpected response format:", data);
-        setRecommendedSlugs([]);
-      }
-    } catch (error) {
-      console.error("Request failed:", error);
-      setRecommendedSlugs([]);
-    } finally {
-      setQueryCompleted(true);
-    }
+  const requestData = {
+    company_id: 10368,
+    query:query
   };
+
+  const headers = {
+    "Content-Type": "application/json",
+  };
+
+  try {
+    const response = await fetch(API_URL, {
+      method: "POST",
+      headers: headers,
+      body: JSON.stringify(requestData),
+  });
+    
+
+    if (!response.ok) {
+      throw new Error(`HTTP error! status: ${response.status}`);
+    }
+
+    const data = await response.json();
+    console.log("Response:", data);
+    
+    setRecommendedProducts(data.recommended_products)
+  } catch (error) {
+    console.error("Request failed:", error);
+  } finally {
+    setQueryCompleted(true);
+  }
+};
 
 
   const handleSuggestionQuery = async (query) => {
-    await chatting(query);
+    // if (!allProducts?.length) {
+    //   console.warn("Products not loaded yet.");
+    //   return;
+    // }
+
+    await chatting(query)
   };
-
-  const recommendedProductObjects = allProducts.filter((product) =>
-    recommendedSlugs.includes(product.slug)
-  );
-
 
   return (
     <div>
@@ -151,17 +147,20 @@ export function Component({ title = "Extension Title Default" }) {
 
       {queryCompleted && (
         <h2 className={styles.title2}>
-          {recommendedProductObjects.length > 0
+          {recommendedProducts.length > 0
             ? "Suggested Products"
             : "No suggested products available."}
         </h2>
       )}
 
       <div className={styles.container}>
-        {recommendedProductObjects.length > 0 &&
-          recommendedProductObjects.map((product) => (
-            <ProductCard key={product.slug} product={product} />
-          ))}
+        {recommendedProducts.length > 0 ? (
+          allProducts
+            .filter((product) => recommendedProducts.includes(product.slug))
+            .map((product) => (
+              <ProductCard key={product.slug} product={product} />
+            ))
+        ) : null}
       </div>
     </div>
   );
