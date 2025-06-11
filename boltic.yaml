@@ -1,9 +1,0 @@
-# boltic.yaml
-app: "stylesync"
-region: "asia-south1"
-handler: "handler.handler"
-language: "nodejs/20"
-
-build:
-  builtin: dockerfile
-  ignorefile: .gitignore

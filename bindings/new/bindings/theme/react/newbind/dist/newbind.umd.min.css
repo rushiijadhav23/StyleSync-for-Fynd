@@ -1,0 +1,89 @@
+.dPLAA {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 240px;
+    height: 430px;
+    padding: 16px;
+    border-radius: 12px;
+    background-color: #fff;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s ease-in-out;
+}
+
+.dPLAA:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+}
+
+.ZzT3G {
+    width: 100%;
+    height: 350px;
+    border-radius: 8px;
+    margin-bottom: 12px;
+    object-fit: contain;
+    object-position: center;
+}
+
+.p1x2t {
+    font-size: 16px;
+    color: #222;
+    font-weight: 600;
+    text-align: center;
+    margin: 8px 0;
+}
+
+.wBYiF {
+    font-size: 13px;
+    color: #777;
+    text-align: center;
+    margin-bottom: 8px;
+}
+
+.NqWXr {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+}
+
+.q7Ot2 {
+    font-size: 16px;
+    font-weight: 700;
+    color: #111;
+}
+
+.fwdqk {
+    text-decoration: line-through;
+    color: #888;
+    font-size: 14px;
+}
+
+.XV4Fd {
+    color: #e53935;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.i3TxS {
+    text-align: center;
+    font-size: 24px;
+    font-weight: 700;
+    margin-top: 40px;
+    margin-bottom: 24px;
+}
+
+.OG8Qe {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 24px;
+    padding: 0 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Optional: hide main product heading if not needed */
+.yQ0RN h1 {
+    display: none;
+}
+

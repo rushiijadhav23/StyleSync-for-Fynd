@@ -1,0 +1,305 @@
+/* General styles for the product grid */
+.gONOQ {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    background-color: #fff;
+    transition: transform 0.3s ease-in-out;
+    width: clamp(200px, 20vw, 240px);
+    height: auto;
+    min-height: clamp(350px, 40vmin, 430px);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    box-sizing: border-box;
+    padding: clamp(8px, 2vw, 16px);
+}
+
+.gONOQ img {
+    width: 100%;
+    height: 65%;
+    object-fit: fill;
+    border-radius: 5px;
+    margin-bottom: clamp(5px, 1vw, 10px);
+}
+
+.gONOQ h1 {
+    font-size: clamp(12px, 1.5vw, 14px);
+    color: #333;
+    margin: 0 clamp(3px, 1vw, 5px);
+    font-weight: 600;
+    line-height: 1.2;
+    text-align: start;
+}
+
+.Bn1NG {
+    text-align: center;
+    font-style: RedHatDisplay (woff2);
+    font-size: xx-large;
+    font-weight: 500;
+    margin-top: 50px;
+}
+
+.gONOQ h2 {
+    font-size: clamp(12px, 1.5vw, 14px);
+    color: #666;
+    margin-bottom: clamp(5px, 1vw, 10px);
+    text-align: start;
+}
+
+.gONOQ:hover {
+    transform: translateY(-5px);
+}
+
+.eXEUf {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: clamp(10px, 2vw, 20px);
+}
+
+.lrM6Q {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: clamp(12px, 2vw, 24px);
+    padding: 0 clamp(10px, 2vw, 20px);
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.MMJNd {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px;
+    padding: 0px;
+    max-width: 1400px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+/* Styles for bundle1, bundle2, bundle3 */
+.Xw8BJ,
+.qaLKB,
+.zzLsR {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(80px, 1fr));
+    grid-template-rows: 1fr 1fr;
+    gap: clamp(5px, 1vw, 10px);
+    grid-template-areas: 
+        "box-1 box-3"
+        "box-4 box-2";
+    width: clamp(250px, 30vw, 400px);
+    background-color: #f5f5d5;
+    border: 2px solid #f4c2c2;
+    border-radius: 10px;
+    height: clamp(300px, 40vmin, 400px);
+    padding: clamp(3px, 1vw, 5px);
+}
+
+._GHEH {
+    background-color: #fff;
+    border-radius: 8px;
+    padding: clamp(5px, 1vw, 10px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+._GHEH[style*="grid-area: box-2"],
+._GHEH[style*="grid-area: box-3"] {
+    min-height: clamp(150px, 20vmin, 200px);
+}
+
+._GHEH[style*="grid-area: box-1"],
+._GHEH[style*="grid-area: box-4"] {
+    min-height: clamp(75px, 10vmin, 100px);
+}
+
+._GHEH .gONOQ {
+    width: 100%;
+    margin: 0;
+    padding: clamp(5px, 1vw, 10px);
+    box-shadow: none;
+    height: auto;
+    min-height: auto;
+}
+
+.SUgml {
+    margin-top: clamp(5px, 1vw, 10px);
+    margin-bottom: clamp(5px, 1vw, 10px);
+    width: 90%;
+    height: clamp(2.5vh, 3vw, 3vh);
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-left: auto;
+    margin-right: auto;
+    border: 0.8px solid var(--dividerStokes, #d4d1d1);
+    border-radius: var(--buttonRadius, 0);
+    cursor: pointer;
+    padding: clamp(10px, 2vw, 20px);
+    text-transform: uppercase;
+    transition: all 0.4s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: clamp(12px, 1.5vw, 14px);
+}
+
+.SUgml:hover {
+    background-color: var(--buttonPrimary, #4e3f09);
+    color: var(--buttonSecondary, #fff);
+}
+
+/* Modal Styles */
+.dZ7I_ {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6); /* Slightly darker backdrop for clarity */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    overflow: auto;
+    animation: zb8ud 0.3s ease-in-out; /* Add fade-in animation */
+}
+
+.LYzKO {
+    background: white;
+    padding: clamp(10px, 2vw, 20px);
+    border-radius: 8px;
+    width: clamp(80%, 90vw, 400px);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    max-height: 90vh;
+    overflow-y: auto;
+    animation: mZk4U 0.3s ease-in-out; /* Add scale-in animation */
+}
+
+.LYzKO h3 {
+    margin-top: 0;
+    margin-bottom: clamp(10px, 2vw, 20px);
+    color: #333;
+    text-align: center;
+    font-size: clamp(16px, 2vw, 20px);
+}
+
+/* Form Styles */
+.h6W7I {
+    margin-bottom: clamp(8px, 1.5vw, 15px);
+}
+
+.h6W7I label {
+    display: block;
+    margin-bottom: clamp(3px, 1vw, 5px);
+    font-weight: 500;
+    color: #333;
+    font-size: clamp(12px, 1.5vw, 14px);
+}
+
+.LLpaI, .x16sB {
+    width: 100%;
+    padding: clamp(5px, 1vw, 10px);
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: clamp(12px, 1.5vw, 14px);
+    box-sizing: border-box;
+}
+
+.LLpaI:focus, .x16sB:focus {
+    outline: none;
+    border-color: #007bff;
+    box-shadow: 0 0 0 2px rgba(0, 123, 255, 0.25);
+}
+
+/* Modal Actions */
+.heSoP {
+    display: flex;
+    gap: clamp(5px, 1vw, 10px);
+    margin-top: clamp(10px, 2vw, 20px);
+    flex-wrap: wrap;
+}
+
+.cCASC, .xP_1t {
+    flex: 1;
+    padding: clamp(5px, 1vw, 10px);
+    border: none;
+    border-radius: 4px;
+    font-size: clamp(12px, 1.5vw, 14px);
+    cursor: pointer;
+    transition: background-color 0.2s;
+    min-width: 120px;
+}
+
+.cCASC {
+    background-color: #007bff;
+    color: white;
+}
+
+.cCASC:hover:not(:disabled) {
+    background-color: #0056b3;
+}
+
+.cCASC:disabled {
+    background-color: #6c757d;
+    cursor: not-allowed;
+}
+
+.xP_1t {
+    background-color: #6c757d;
+    color: white;
+}
+
+.xP_1t:hover {
+    background-color: #545b62;
+}
+
+/* Price Display */
+.q7Ot2 {
+    margin: clamp(5px, 1vw, 10px) 0;
+    font-weight: 600;
+    color: #333;
+    font-size: clamp(14px, 1.5vw, 16px);
+    display: flex;
+    gap: clamp(4px, 1vw, 8px);
+    align-items: center;
+}
+
+.mcMu9 {
+    color: #111;
+    font-size: clamp(14px, 1.5vw, 16px);
+    font-weight: 700;
+    margin-left: 0;
+}
+
+/* Button Loading State */
+.SUgml:disabled {
+    background-color: #6c757d;
+    opacity: 0.6;
+}
+
+/* Animations */
+@keyframes zb8ud {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes mZk4U {
+    from {
+        transform: scale(0.95);
+        opacity: 0;
+    }
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
